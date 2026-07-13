@@ -1,0 +1,50 @@
+/* ══════════════════════════════════════════════════════════════
+   Status Bar
+   ══════════════════════════════════════════════════════════════ */
+
+.status-bar {
+  height: 22px;
+  background: #007acc; /* VS Code blue-ish style but adapted */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  font-size: 11px;
+  font-family: var(--font-sans);
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+/* Adapt color to theme */
+.status-bar {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.status-bar-left,
+.status-bar-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  height: 100%;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.status-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.status-icon {
+  font-size: 12px;
+}
