@@ -1,0 +1,97 @@
+/* ══════════════════════════════════════════════════════════════
+   Code Editor Panel
+   ══════════════════════════════════════════════════════════════ */
+
+.code-editor-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.code-editor-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Welcome/empty state */
+.editor-welcome {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  gap: 16px;
+  padding: 40px;
+  animation: fadeIn 0.5s ease;
+}
+
+.editor-welcome-icon {
+  font-size: 48px;
+  opacity: 0.3;
+}
+
+.editor-welcome-text {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.editor-welcome-shortcuts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.editor-shortcut {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.editor-shortcut kbd {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Status bar */
+.editor-statusbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  height: 24px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  font-size: 11px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.statusbar-left,
+.statusbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.statusbar-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.save-indicator {
+  color: var(--success);
+  animation: fadeIn 0.3s ease;
+}

@@ -1,0 +1,42 @@
+{
+  "name": "fableos",
+  "version": "1.0.0",
+  "description": "FableOS Web IDE",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "package": "npm run build --prefix frontend && electron-builder"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.nova.ide",
+    "productName": "Nova IDE",
+    "directories": {
+      "output": "dist-app"
+    },
+    "win": {
+      "target": "dir",
+      "icon": "backend/static/logo.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "backend/static/logo.ico",
+      "uninstallerIcon": "backend/static/logo.ico",
+      "installerHeader": "backend/static/installer_header.bmp",
+      "installerSidebar": "backend/static/installer_sidebar.bmp",
+      "uninstallerSidebar": "backend/static/installer_sidebar.bmp",
+      "runAfterFinish": true
+    },
+    "files": [
+      "main.js",
+      "backend/**/*",
+      "frontend/dist/**/*"
+    ]
+  }
+}
